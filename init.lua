@@ -74,8 +74,12 @@ return {
             references = {
               exclude = {}
             }
-          }
+          },
         }
+      },
+      volar = {
+        -- Make sure to add "allowJs": true and "checkJs": true to jsconfig.json/tsconfig.json
+        filetypes = { 'vue', 'typescript', 'javascript' },
       }
     }
   }
