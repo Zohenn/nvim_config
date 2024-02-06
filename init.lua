@@ -58,6 +58,18 @@ return {
 
         return opts
       end
+    },
+    {
+      "mrcjkb/rustaceanvim",
+      ft = { "rust" },
+      init = function() astronvim.lsp.skip_setup = utils.list_insert_unique(astronvim.lsp.skip_setup, "rust_analyzer") end,
+      config = function()
+        vim.g.rustaceanvim = {
+          server = {
+            on_attach = require('astronvim.utils.lsp').on_attach
+          },
+        }
+      end,
     }
   },
   lsp = {
