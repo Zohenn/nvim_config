@@ -78,8 +78,26 @@ return {
         require('todo-comments').setup {}
       end,
       event = "User AstroFile",
+    },
+    {
+      "catppuccin/nvim",
+      name = "catppuccin",
+      opts = {
+        integrations = {
+          native_lsp = {
+            enabled = true,
+            underlines = {
+              errors = { "undercurl" },
+              hints = { "undercurl" },
+              warnings = { "undercurl" },
+              information = { "undercurl" },
+            },
+          },
+        },
+      }
     }
   },
+  colorscheme = "catppuccin",
   lsp = {
     config = {
       intelephense = {
